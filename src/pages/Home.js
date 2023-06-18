@@ -21,9 +21,22 @@ export const Home = () => {
   return (
     <div style={{ margin: '20px' }}>
       <div style={{ display: 'flex' }}>
-        <div onClick={togglePopup}>
-          <HabitCard habit={{ name: 'Create My Own' }} />
+        <div
+          style={{
+            width: '250px',
+            height: '150px',
+            backgroundColor: 'black',
+            color: 'white',
+            borderRadius: '10px',
+            margin: '10px',
+            cursor: 'pointer',
+            paddingTop: '10px',
+          }}
+          onClick={togglePopup}
+        >
+          <h3 style={{ textAlign: 'left', margin: '20px' }}>Create My Own</h3>
         </div>
+
         {state.allHabits.map((habit) => (
           <div onclick={() => {}}>
             <HabitCard habit={habit} />

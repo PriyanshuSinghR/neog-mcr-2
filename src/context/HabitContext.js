@@ -10,11 +10,6 @@ const reduceHabit = (state, action) => {
         ...state,
         allHabits: action.payload,
       };
-    case 'UPDATE_ARCHIVE':
-      return {
-        ...state,
-        archive: action.payload,
-      };
 
     default:
       break;
@@ -24,7 +19,6 @@ const reduceHabit = (state, action) => {
 export function HabitProvider({ children }) {
   const [state, dispatch] = useReducer(reduceHabit, {
     allHabits: habit,
-    archive: [],
   });
   console.log(state.allHabits);
   return (
