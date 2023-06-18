@@ -274,7 +274,7 @@ export const Home = () => {
                   cursor: 'pointer',
                 }}
               >
-                Save
+                Add
               </button>
             </form>
           }
