@@ -9,6 +9,7 @@ export const Home = () => {
   const [form, setForm] = useState({});
 
   const [isOpen, setIsOpen] = useState(false);
+  const mainHabit = state.allHabits.filter((habit) => !habit.isArchive);
 
   const handleInputs = (el) => {
     const name = el.target.name;
@@ -37,7 +38,7 @@ export const Home = () => {
           <h3 style={{ textAlign: 'left', margin: '20px' }}>Create My Own</h3>
         </div>
 
-        {state.allHabits.map((habit) => (
+        {mainHabit.map((habit) => (
           <div onclick={() => {}}>
             <HabitCard habit={habit} />
           </div>
